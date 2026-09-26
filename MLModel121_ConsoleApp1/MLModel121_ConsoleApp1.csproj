@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="MLModel1.training.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="AWSSDK.Rekognition" Version="4.0.100.14" />
+    <PackageReference Include="Microsoft.ML" Version="5.0.0" />
+    <PackageReference Include="Microsoft.ML.Vision" Version="5.0.0" />
+    <PackageReference Include="SciSharp.TensorFlow.Redist" Version="2.16.0" />
+    <PackageReference Include="Telegram.Bot" Version="22.10.3.1" />
+  </ItemGroup>
+  <ItemGroup Label="MLModel1">
+    <Content Include="MLModel1.mlnet">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="MLModel1.training.cs" />
+  </ItemGroup>
+</Project>

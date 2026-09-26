@@ -1,0 +1,6 @@
+.vs/
+**/bin/
+**/obj/
+*.user
+*.suo
+MLModel121_ConsoleApp1/.git_backup/
